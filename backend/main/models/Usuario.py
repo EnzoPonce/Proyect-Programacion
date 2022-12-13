@@ -34,6 +34,7 @@ class Usuario(db.Model):
             'poemas_cant':len(poemas),
             'poemas': poemas,
             'calificaciones':calificaciones,
+            'calificaciones_cant':len(self.calificaciones)
         }
         return usuario_json
 
@@ -59,6 +60,6 @@ class Usuario(db.Model):
         return Usuario(id = id,
                     nombre = nombre,
                     email = email,
-                    plain_password = contrasena,
+                    contrasena = contrasena,
                     admin = admin
                     )
